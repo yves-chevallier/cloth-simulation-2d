@@ -5,21 +5,20 @@
 
 #include <vector>
 
-class Cloth
-{
+class Cloth {
 private:
-	Vec2 gravity = { 0.0f, 981.0f };
-	float drag = 0.01f;
-	float elasticity = 10.0f;
+  Vec2 gravity = {0.0f, 981.0f};
+  float drag = 0.01f;
+  float elasticity = 10.0f;
 
-	std::vector<Point*> points;
-	std::vector<Stick*> sticks;
+  std::vector<Point *> points;
+  std::vector<Stick *> sticks;
 
 public:
-	Cloth() = default;
-	Cloth(int width, int height, int spacing, int startX, int startY);
-	~Cloth();
+  Cloth() = default;
+  Cloth(int width, int height, int spacing, int startX, int startY);
+  ~Cloth();
 
-	void Update(Renderer* renderer, Mouse* mouse, float deltaTime);
-	void Draw(Renderer* renderer) const;
+  void Update(Renderer *renderer, Mouse *mouse, float deltaTime);
+  void Draw(Renderer *renderer) const;
 };

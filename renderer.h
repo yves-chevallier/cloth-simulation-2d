@@ -4,22 +4,22 @@
 
 class Renderer {
 private:
-	int windowWidth, windowHeight;
-	SDL_Window* window;
-	SDL_Renderer* renderer;
+  int windowWidth, windowHeight;
+  SDL_Window *window;
+  SDL_Renderer *renderer;
 
 public:
-	Renderer() = default;
-	~Renderer();
-	
-	int GetWindowWidth() const { return windowWidth; }
-	int GetWindowHeight() const { return windowHeight; }
+  Renderer() = default;
+  ~Renderer();
 
-	bool Setup();
+  int GetWindowWidth() const { return windowWidth; }
+  int GetWindowHeight() const { return windowHeight; }
 
-	void ClearScreen(Uint32 color) const;
-	void Render() const;
+  bool Setup();
 
-	void DrawLine(int x0, int y0, int x1, int y1, Uint32 color) const;
-	void DrawPoint(int x, int y, Uint32 color) const;
+  void ClearScreen(Uint32 color) const;
+  void Render() const;
+
+  void DrawLine(int x0, int y0, int x1, int y1, Uint32 color) const;
+  void DrawPoint(int x, int y, Uint32 color) const;
 };
